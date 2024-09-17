@@ -12,7 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Adjust the path pattern if needed
                 .allowedOrigins(
-                        "https://pos-monorepo.onrender.com"
+                        "*"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Allowed HTTP methods
                 .allowedHeaders("*"); // Allowed headers
