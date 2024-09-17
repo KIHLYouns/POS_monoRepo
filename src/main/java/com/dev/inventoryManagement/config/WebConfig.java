@@ -12,8 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Adjust the path pattern if needed
                 .allowedOrigins(
-                        "http://localhost:5173",  // Your frontend development URL
-                        "https://b7cf-196-217-40-19.ngrok-free.app"  // Your ngrok URL
+                        "https://pos-monorepo.onrender.com"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Allowed HTTP methods
                 .allowedHeaders("*"); // Allowed headers

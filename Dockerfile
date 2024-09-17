@@ -13,6 +13,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 FROM openjdk:17-alpine
 WORKDIR /app
+
 # Copy the built jar file
 COPY --from=build /app/target/*.jar /app/app.jar
 # Expose the port the application runs on
