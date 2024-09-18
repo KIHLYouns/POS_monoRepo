@@ -19,10 +19,9 @@ public class WebConfig implements WebMvcConfigurer {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         configuration.setAllowedHeaders(Collections.singletonList("*"));
-        // Allow credentials to true if your frontend needs to send cookies or authentication information
         configuration.setAllowCredentials(true);
-        // Set allowed origins to specific domains or use a custom source to match against a pattern
-        configuration.setAllowedOriginPatterns(Collections.singletonList("https://*.onrender.com"));
+        // Allow all origins
+        configuration.setAllowedOriginPatterns(Collections.singletonList("*"));
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/api/**", configuration);
